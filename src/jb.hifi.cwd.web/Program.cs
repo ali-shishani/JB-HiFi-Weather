@@ -1,6 +1,8 @@
 using AspNetCoreRateLimit;
 using jb.hifi.core.Interfaces;
 using jb.hifi.core.Models;
+using jb.hifi.cwd.web.Config;
+using jb.hifi.cwd.web.Extensions;
 using jb.hifi.service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,13 +19,7 @@ builder.Services.AddTransient<ICurrentWeatherDataService, CurrentWeatherDataServ
 builder.Services.AddTransient<IOpenWeatherClient, OpenWeatherClient>();
 
 // AspNetCoreRateLimit
-builder.Services.AddMemoryCache();
-builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
-builder.Services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
-builder.Services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
-builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
-builder.Services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
-builder.Services.AddInMemoryRateLimiting();
+builder.Services.AddRateLimiting(builder.Configuration);
 
 // Auto Mapp
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
@@ -32,6 +28,9 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// Use Rate Limiting
+app.UseRateLimiting();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
