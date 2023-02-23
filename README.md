@@ -7,7 +7,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ### Key Features in the solution
 * React app located in the ClientApp folder - [Create React App](https://github.com/facebookincubator/create-react-app).
-* WebApi available to service the front-end React app. The WebApi have a REST URL that accepts both a city name and country name
+* WebApi available to service the front-end React app. The WebApi have a REST URL that accepts both a city name and country name.
 * Rate Limition - 5 requests per hour maximum limit - client id or can support ip address.
 * Integration with Open Weather API and providing weather description of the specified city and country.
 
@@ -30,7 +30,7 @@ The watcher includes an interactive command-line interface with the ability to r
 
 ![Jest watch mode](http://facebook.github.io/jest/img/blog/15-watch.gif)
 
-### Running Unit Test - React - Command Line Interface
+### Running Unit Test - Back End
 
 When you run `npm test`, Jest will launch in the watch mode. Every time you save a file, it will re-run the tests, just like `npm start` recompiles the code.
 
