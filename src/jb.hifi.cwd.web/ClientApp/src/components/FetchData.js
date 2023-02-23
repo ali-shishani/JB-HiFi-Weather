@@ -30,7 +30,12 @@ export class FetchData extends Component {
         });
         debugger;
         var url = 'currentweatherdata?city=' + city + '&country=' + country;
-        fetch(url).then((response) => {
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'X-ClientId': 'your-rate-limiting-key1',
+            },
+        }).then((response) => {
             if (response.ok) {
                 return response.json();
             }

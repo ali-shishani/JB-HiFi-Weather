@@ -28,7 +28,7 @@ namespace jb.hifi.web.Config
     {
         public Task<string> ResolveClientAsync(HttpContext httpContext)
         {
-            return Task.FromResult<string>(httpContext.Request.Query["CustomKey"]);
+            return Task.FromResult<string>(httpContext.Request.Query["X-ClientId"]);
         }
     }
 }

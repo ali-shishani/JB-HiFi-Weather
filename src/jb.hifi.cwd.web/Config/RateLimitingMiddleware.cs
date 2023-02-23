@@ -1,4 +1,5 @@
 ﻿using AspNetCoreRateLimit;
+using jb.hifi.web.Config;
 
 namespace jb.hifi.cwd.web.Config
 {
@@ -15,7 +16,7 @@ namespace jb.hifi.cwd.web.Config
 
             // Inject Counter and Store Rules
             services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
-            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            services.AddSingleton<IRateLimitConfiguration, CustomRateLimitConfiguration>();
             services.AddInMemoryRateLimiting();
 
             // Return the services
