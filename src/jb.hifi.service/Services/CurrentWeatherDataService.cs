@@ -35,17 +35,6 @@ namespace jb.hifi.service.Services
             var response = await _openWeatherClient.GetCurrentWeatherInfoByCityAndCountryNamesAsync(openWeatherDataRequest);
             var result = _mapper.Map<CurrentWeatherDataOutput>(response);
 
-            //// TODO: remove test line
-            //result.Success = false;
-            //result.Errors = new List<ResponseError>()
-            //{
-            //    new ResponseError()
-            //    {
-            //        Code = "500",
-            //        Message = "This is a test error!"
-            //    }
-            //};
-
             return result;
         }
     }

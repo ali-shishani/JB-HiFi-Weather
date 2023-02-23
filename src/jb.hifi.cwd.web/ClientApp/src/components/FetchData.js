@@ -28,7 +28,7 @@ export class FetchData extends Component {
             ...this.state,
             loading: true
         });
-        debugger;
+        
         var url = 'currentweatherdata?city=' + city + '&country=' + country;
         fetch(url, {
             method: 'GET',

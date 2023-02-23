@@ -2,7 +2,6 @@ using AspNetCoreRateLimit;
 using jb.hifi.core.Interfaces;
 using jb.hifi.core.Models;
 using jb.hifi.cwd.web.Config;
-using jb.hifi.cwd.web.Extensions;
 using jb.hifi.service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
