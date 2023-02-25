@@ -24,6 +24,11 @@ Follow these steps:
 
 ### Running Unit Test - React - Command Line Interface
 
+* Open command prompt and navigate to the 'ClientApp' subdirectory.
+* run `npm install` command
+* run `npm test` command
+* watch the unit test output and make sure all tests are successful.
+
 When you run `npm test`, Jest will launch in the watch mode. Every time you save a file, it will re-run the tests, just like `npm start` recompiles the code.
 
 The watcher includes an interactive command-line interface with the ability to run all tests, or focus on a search pattern. It is designed this way so that you can keep it open and enjoy fast re-runs. You can learn the commands from the “Watch Usage” note that the watcher prints after every run:

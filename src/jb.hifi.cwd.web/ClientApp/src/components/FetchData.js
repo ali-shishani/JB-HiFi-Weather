@@ -117,7 +117,10 @@ export class FetchData extends Component {
                 <br />
                 <div className="row">
                     <div className="col">
-                        <button type="button" className="btn btn-primary"
+                        <button
+                            type="button"
+                            className="btn btn-primary"
+                            data-testid="btnWeatherDataRefresh"
                             onClick={(event) => {
                                 this.populateWeatherData();
                             }}>Refresh</button>
@@ -136,7 +139,7 @@ export class FetchData extends Component {
                         <div className="col">
                             <div className="col-sm-12">
                                 <label htmlFor="staticError" className="col-sm-2 col-form-label text-danger"><strong>An error was handled!</strong></label>
-                                <textarea readOnly className="form-control form-control-plaintext text-danger" id="staticError" value={this.state.errorMessage} />
+                                <textarea readOnly className="form-control form-control-plaintext text-danger" id="staticError" data-testid="staticError" value={this.state.errorMessage} />
                             </div>
                         </div>
                     </div>
@@ -149,7 +152,7 @@ export class FetchData extends Component {
                         <div className="col">
                             <div className="col-sm-12">
                                 <label htmlFor="staticDescription" className="col-sm-2 col-form-label .text-primary"><strong>Weather Description:</strong></label>
-                                <textarea readOnly className="form-control form-control-plaintext .text-primary" id="staticDescription" value={this.state.weatherInfo.description} />
+                                <textarea readOnly className="form-control form-control-plaintext .text-primary" id="staticDescription" data-testid="staticDescription" value={this.state.weatherInfo.description} />
                             </div>
                         </div>
                     </div>

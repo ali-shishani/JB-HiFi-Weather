@@ -10,5 +10,5 @@ it('renders without crashing', async () => {
     <MemoryRouter>
       <App />
     </MemoryRouter>);
-  await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
 });
