@@ -10,8 +10,8 @@ const server = setupServer(
         return res(ctx.json({
             description: 'cloudy',
             success: true,
-            errors:[]
-        }))
+            errors: []
+        }));
     }),
 )
 
@@ -25,6 +25,25 @@ test('loads weather page and displays initial populated data', async () => {
 
     // moment of truth!
     expect(description).toHaveTextContent('cloudy');
+})
+
+test('weather page handles refresh data', async () => {
+    server.use(
+        rest.get('/currentweatherdata', (req, res, ctx) => {
+            return res(ctx.json({
+                description: 'sunny',
+                success: true,
+                errors: []
+            }));
+        }),
+    );
+
+    render(<FetchData url="/fetch-data" />);
+    fireEvent.click(screen.getByTestId('btnWeatherDataRefresh'));
+    var description = await waitFor(() => screen.getByTestId('staticDescription'));
+
+    // moment of truth!
+    expect(description).toHaveTextContent('sunny');
 })
 
 test('weather page handles server error', async () => {
