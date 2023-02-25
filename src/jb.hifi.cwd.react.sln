@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jb.hifi.core", "jb.hifi.cor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jb.hifi.service", "jb.hifi.service\jb.hifi.service.csproj", "{D609330D-396B-48B0-9B4C-668080EE1AEC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0ECF8E2F-648A-4DC6-AA89-D068AE69A80B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jb.hifi.service.test", "jb.hifi.service.test\jb.hifi.service.test.csproj", "{689C1D31-ADB8-4097-9AF1-C559737E9EAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{D609330D-396B-48B0-9B4C-668080EE1AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D609330D-396B-48B0-9B4C-668080EE1AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D609330D-396B-48B0-9B4C-668080EE1AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689C1D31-ADB8-4097-9AF1-C559737E9EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689C1D31-ADB8-4097-9AF1-C559737E9EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689C1D31-ADB8-4097-9AF1-C559737E9EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689C1D31-ADB8-4097-9AF1-C559737E9EAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{689C1D31-ADB8-4097-9AF1-C559737E9EAB} = {0ECF8E2F-648A-4DC6-AA89-D068AE69A80B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6924177-7B64-4E99-B3D6-DE57FC2E6CC9}

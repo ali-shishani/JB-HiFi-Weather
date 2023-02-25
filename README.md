@@ -37,5 +37,10 @@ The watcher includes an interactive command-line interface with the ability to r
 
 ### Running Unit Test - Back End
 
-TBA
+* Install Visual Studio 2022.
+* Install NodeJs.
+* Clone the repo.
+* Restore All new packages in Visual Studio.
+* Go to test explorer and run all tests
+* Make sure that all tests are successful.
 
