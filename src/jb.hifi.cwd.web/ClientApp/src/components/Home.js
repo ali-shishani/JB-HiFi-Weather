@@ -13,7 +13,7 @@ export class Home extends Component {
                     <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
                     <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
                 </ul>
-                <p>Please feel free to view the swagger documentation of my <code>WebApi</code> by navigating to <code><a href="/swagger">/swagger</a></code>:</p>
+                <p>Please feel free to view the swagger documentation of my <code>WebApi</code> by navigating to <code><a href="https://localhost:7240/swagger">/swagger</a></code>, I am running the API on port 7240.</p>
                 <p>To show a little bit of work in React front-end, I have also set up:</p>
                 <ul>
                     <li><strong>Client-side navigation</strong>. For example, click <em>Check Weather</em> then <em>Back</em> to return here.</li>
